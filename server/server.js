@@ -35,7 +35,7 @@ app.use(session({
     resave: false,
     saveUninitialized: true,
     store: MongoStore.create({
-        mongoUrl: 'mongodb://localhost/turtle',
+        mongoUrl: 'mongodb://localhost/kanban',
     })
 }))
 
