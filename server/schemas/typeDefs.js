@@ -8,6 +8,17 @@ const typeDefs = gql`
         password: String!
         createdAt: String!
     }
+    type List {
+        _id: ID
+        name: String!
+        createdAt: String!
+        tags: [Tag]
+    }
+    type Tag {
+        _id: ID
+        name: String!
+        createdAt: String!
+    }
     type Query {
         users: [User]
         user(username: String!): User
