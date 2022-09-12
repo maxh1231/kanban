@@ -1,6 +1,6 @@
 const { Schema, model } = require('mongoose');
 
-const listSchema = new Schema({
+const tagSchema = new Schema({
     name: {
         type: String,
         required: true,
@@ -11,14 +11,8 @@ const listSchema = new Schema({
         default: Date.now,
         required: true
     },
-    tags: [
-        {
-            type: Schema.Types.ObjectId,
-            ref: 'Tag'
-        }
-    ]
 });
 
-const List = model('List', listSchema);
+const Tag = model('Tag', tagSchema);
 
-module.exports = List;
+module.exports = Tag;
