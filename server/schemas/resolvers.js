@@ -53,6 +53,11 @@ const resolvers = {
         addList: async (parent, args, context) => {
             const list = await List.create(args);
             return list;
+        },
+
+        addTag: async (parent, args, contedext) => {
+            const tag = await Tag.create(args);
+            return tag;
         }
     }
 }
