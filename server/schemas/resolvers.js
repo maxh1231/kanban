@@ -1,4 +1,4 @@
-const { User } = require('../models');
+const { User, Tag, List } = require('../models');
 const { AuthenticationError } = require('apollo-server-express');
 
 const resolvers = {
@@ -48,6 +48,11 @@ const resolvers = {
                 throw new AuthenticationError('No user found');
             }
             return user;
+        },
+
+        addList: async (parent, args, context) => {
+            const list = await List.create(args);
+            return list;
         }
     }
 }
