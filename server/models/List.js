@@ -15,4 +15,4 @@ const listSchema = new Schema({
 
 const List = model('List', listSchema);
 
-module.exports = User;
+module.exports = List;
