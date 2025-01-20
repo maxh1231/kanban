@@ -2,9 +2,9 @@ services:
   mysql:
     image: 'mysql:latest'
     environment:
-      - 'MYSQL_DATABASE='
-      - 'MYSQL_PASSWORD='
-      - 'MYSQL_ROOT_PASSWORD='
-      - 'MYSQL_USER='
+      - 'MYSQL_DATABASE=kanban_db'
+      - 'MYSQL_PASSWORD=kanban_password'
+      - 'MYSQL_ROOT_PASSWORD=root_password123'
+      - 'MYSQL_USER=kanban_user'
     ports:
       - '3306'
